@@ -31,7 +31,9 @@ Understanding the code in each group in order/ reverse order:
 - Push the string: `'Let's start the CTF:'` onto the stack. In another word, the $esp register holds the string at this step.
 - _0x08048087_ - _0x0804808f_: When you see the `int 0x80`, before it should be a syscall. In this case, al register (8 bits version of eax) is set to 4, so the function wants to call sys_write here. 
 
-`ssize_t write(int fd, const void *buf, size_t count);`
+```c
+ssize_t write(int fd, const void *buf, size_t count);
+```
 
 `write() writes up to count bytes from the buffer starting at buf to the file referred to by the file descriptor fd.`
 
